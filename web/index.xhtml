@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <div class="card container mt-5 p-5 shadow">
+                <h1 class="display-4 text-center text-warning font-weight-bold mb-5">SignUp Form</h1>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <p:outputLabel for="username" value="Username"/>
+                        <div class="ui-inputgroup from-group">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                            <p:inputText id="username" value="#{myconn.username}" class="form-control" placeholder="username" required="true"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p:outputLabel for="password" value="Password"/>
+                        <div class="ui-inputgroup from-group">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                            <p:inputText id="password" value="#{myconn.password}" placeholder="password" class="form-control" required="true"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p:outputLabel for="City" value="City"/>
+                        <div class="ui-inputgroup from-group">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-home"></i></span>
+                            <p:inputText id="City" value="#{myconn.city}" placeholder="City" class="form-control" required="true"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <p:outputLabel for="dob" value="Date Of Birth"/>
+                        <div class="ui-inputgroup from-group">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-calendar-times"></i></span>
+                            <p:inputText id="dob" value="#{myconn.dob}" placeholder="Date Of Birth" class="form-control" required="true"/>
+                        </div>
+                    </div>
+                    <p:commandButton id="submit" value="submit" action="#{myconn.Register()}" class="form-control btn btn-warning"/>
+                </div>
+
+
+
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
